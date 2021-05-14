@@ -42,9 +42,8 @@ def addbook():
     
     print(bid,title)
     m = addBook(bid, title, author, status)
-    response = 'YAY'
 
-    return jsonify(response), 200
+    return render_template('./addb.html')
 
 @app.route('/delete/book',  methods =["POST"])
 def delbook():
@@ -82,4 +81,4 @@ def viewB():
     return jsonify(response), 200
 
 if __name__ == '__main__':
-  app.run(port='8080')
+  app.run()

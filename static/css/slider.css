@@ -3,7 +3,6 @@
 }
 .theme-default .nivoSlider {
 	position:relative;
-	background:#fff url(../images/loading.gif) no-repeat 50% 50%; 
 }
 .theme-default .nivoSlider img {
 	position:absolute;
