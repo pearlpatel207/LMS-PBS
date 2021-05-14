@@ -50,8 +50,8 @@ def delbook():
     bid = request.form['bid']
     print(bid)
     m = deleteBook(bid)
-    response = 'YAY'
-    return jsonify(response), 200
+    
+    return render_template('./deletebook.html')
 
 @app.route('/issue/book',  methods =["POST"])
 def issbook():
@@ -59,16 +59,16 @@ def issbook():
     issueto = request.form['iname']
     print(bid)
     m = issue(bid, issueto)
-    response = 'YAY'
-    return jsonify(response), 200
+    
+    return render_template('./issuebook.html')
 
 @app.route('/return/book',  methods =["POST"])
 def rebook():
     bid = request.form['bid']
     print(bid)
     m = returnBook(bid)
-    response = 'YAY'
-    return jsonify(response), 200
+    
+    return render_template('./returnbook.html')
 
 @app.route('/viewB',  methods =["GET"])
 def viewB():
